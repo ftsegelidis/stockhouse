@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="162dp"
         android:layout_below="@+id/productText"
