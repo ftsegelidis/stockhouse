@@ -161,35 +161,7 @@ public class addScreen extends AppCompatActivity {
 
             //this method will be running on UI thread
             pdLoading.dismiss();
-            List<DataProduct> data = new ArrayList<>();
-
             pdLoading.dismiss();
-            if (result.equals("no rows")) {
-                Toast.makeText(addScreen.this, "0 Αποτελέσματα", Toast.LENGTH_LONG).show();
-            } else {
-
-                try {
-
-                    JSONArray jArray = new JSONArray(result);
-
-                    // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArray.length(); i++) {
-                        JSONObject json_data = jArray.getJSONObject(i);
-                        DataProduct productData = new DataProduct();
-                        productData.productTitle = json_data.getString("productTitle");
-                        productData.productPrice = json_data.getString("productPrice");
-                        data.add(productData);
-
-                    }
-
-
-                } catch (JSONException e) {
-                    // You to understand what actually error is and handle it appropriately
-                   // Toast.makeText(addScreen.this, e.toString(), Toast.LENGTH_LONG).show();
-                   // Toast.makeText(addScreen.this, result.toString(), Toast.LENGTH_LONG).show();
-                }
-
-            }
 
         }
 

@@ -25,7 +25,19 @@
         android:layout_height="wrap_content"
         android:text="search"
         android:onClick="startSearchActivity"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/add_btn"
         android:layout_alignLeft="@+id/add_btn"
-        android:layout_alignStart="@+id/add_btn" />
+        android:layout_alignStart="@+id/add_btn"
+        android:layout_marginTop="54dp" />
+
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/search_btn"
+        android:layout_alignStart="@+id/search_btn"
+        android:layout_below="@+id/search_btn"
+        android:layout_marginTop="68dp"
+        android:text="UPDATE"
+        android:onClick="startUpdateActivity"/>
 </RelativeLayout>

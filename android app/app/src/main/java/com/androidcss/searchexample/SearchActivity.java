@@ -148,7 +148,6 @@ public class SearchActivity extends AppCompatActivity {
                 conn.connect();
 
             } catch (IOException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
                 return e1.toString();
             }

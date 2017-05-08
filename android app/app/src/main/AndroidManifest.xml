@@ -32,7 +32,8 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".addScreen"></activity>
+        <activity android:name=".addScreen" />
+        <activity android:name=".updateScreen"></activity>
     </application>
 
 </manifest>
