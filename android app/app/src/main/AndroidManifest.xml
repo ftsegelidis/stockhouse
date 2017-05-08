@@ -13,23 +13,26 @@
             android:name="android.app.default_searchable"
             android:value=".startScreen" />
 
-        <activity
-            android:name=".startScreen">
+        <activity android:name=".startScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity android:name=".SearchActivity"
-            android:launchMode="singleTop">>
+        <activity
+            android:name=".SearchActivity"
+            android:launchMode="singleTop">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
-            <meta-data android:name="android.app.searchable"
-                android:resource="@xml/searchable"/>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
+        <activity android:name=".addScreen"></activity>
     </application>
 
 </manifest>
