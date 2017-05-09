@@ -33,12 +33,13 @@ public class updateScreen extends AppCompatActivity {
     public static EditText productId;
     public static final int CONNECTION_TIMEOUT = 10000;
     public static final int READ_TIMEOUT = 15000;
-    public final String IP = "192.168.1.4";
+    public String IP ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_screen);
+        this.IP = getSharedPreferences("MyPref", MODE_PRIVATE).getString("IP","");
         productTitle = (EditText) findViewById(R.id.editName);
         productPrice = (EditText) findViewById(R.id.editPrice);
         productId = (EditText) findViewById(R.id.editId);

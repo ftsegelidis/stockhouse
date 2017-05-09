@@ -37,12 +37,13 @@ public class addScreen extends AppCompatActivity {
     public static EditText productPrice;
     public static final int CONNECTION_TIMEOUT = 10000;
     public static final int READ_TIMEOUT = 15000;
-    public final String IP = "192.168.1.4";
+    public String IP ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_screen);
+        this.IP = getSharedPreferences("MyPref", MODE_PRIVATE).getString("IP","");
         productTitle = (EditText) findViewById(R.id.productText);
         productPrice = (EditText) findViewById(R.id.priceText);
     }
