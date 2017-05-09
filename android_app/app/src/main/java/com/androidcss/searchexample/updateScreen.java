@@ -47,10 +47,16 @@ public class updateScreen extends AppCompatActivity {
 
     public void makeUpdate(View v) {
         if (!productPrice.getText().toString().matches("") && !productTitle.getText().toString().matches("")) {
-            new updateScreen.AsyncFetch(productTitle.getText().toString(), productPrice.getText().toString(),productId.getText().toString()).execute();
-            productTitle.setText("");
-            productPrice.setText("");
-            productId.setText("");
+            try {
+                new updateScreen.AsyncFetch(productTitle.getText().toString(), productPrice.getText().toString(), productId.getText().toString()).execute();
+                productTitle.setText("");
+                productPrice.setText("");
+                productId.setText("");
+
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
         }
     }
 

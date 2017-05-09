@@ -50,9 +50,14 @@ public class addScreen extends AppCompatActivity {
 
     public void makeAdd(View v) {
         if (!productPrice.getText().toString().matches("") && !productTitle.getText().toString().matches("")) {
-            new AsyncFetch(productTitle.getText().toString(), productPrice.getText().toString()).execute();
-            productTitle.setText("");
-            productPrice.setText("");
+            try {
+                new AsyncFetch(productTitle.getText().toString(), productPrice.getText().toString()).execute();
+                productTitle.setText("");
+                productPrice.setText("");
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
         }
     }
 
