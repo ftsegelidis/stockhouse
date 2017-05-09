@@ -8,6 +8,8 @@
 android_app/*.apk
 android_app/*.ap_
 
+images/
+
 # Files for the ART/Dalvik VM
 android_app/*.dex
 
